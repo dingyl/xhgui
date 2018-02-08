@@ -21,7 +21,8 @@
 #### mongodb扩展安装
     
     #xhgui采用mongodb存储数据,首先需要安装mongodb
-
+    #mongodb版本不易过高,把mongodb 版本降级为3.4最好,以免部分功能报错
+    
     tar zxf mongodb-1.3.0.tgz
     cd mongodb-1.3.0
     phpize

@@ -160,6 +160,8 @@ register_shutdown_function(
             'request_date' => date('Y-m-d', $time),
         );
 
+//        error_log(var_export($data,true),3,__DIR__."/xhprof.log");
+
         $profile = [];
         foreach($data['profile'] as $key => $value) {
             $profile[strtr($key, ['.' => '_'])] = $value;
