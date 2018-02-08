@@ -165,7 +165,7 @@ register_shutdown_function(
             $profile[strtr($key, ['.' => '_'])] = $value;
         }
         $data['profile'] = $profile;
-        
+
         try {
             $config = Xhgui_Config::all();
             $config += array('db.options' => array());
