@@ -38,7 +38,8 @@ return array(
         // 如果域名为我们新建的域名则不捕获
         $domains = ["xyii.com"];
         $domain = $_SERVER['SERVER_NAME'];
-        if(in_array($domain,$domains)){
+        $uri = $_SERVER['REQUEST_URI'];
+        if(in_array($domain,$domains) && !preg_match('/web\/debug/',$uri)){
             return true;
         }else{
             return false;
